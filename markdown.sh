@@ -5,8 +5,9 @@ echo '<head>'
 echo '        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />'
 echo '</head>'
 echo '<body>'
+ZOZ=n
 
-while read LINE
+while IFS= read LINE
 do
 	if echo "$LINE" | grep '^# '>/dev/null
        	then
@@ -24,6 +25,28 @@ do
        	then
 		LINE=$(echo "$LINE" | sed 's@_\([^_]\+\)_@<em>\1</em>@g')
 		echo "$LINE"
+	elif  echo "$LINE" | grep '<https://.*>'>/dev/null
+       	then
+		LINE=$(echo "$LINE" | sed 's@<https://\([^<]\+\)>@<a href = "https://\1"https://>https://\1</a>@g')
+		echo "$LINE"
+	elif echo "$LINE" | grep '^ - .*$'>/dev/null
+	then
+		if test "$ZOZ" = "y"
+		then 
+			LINE=$(echo "$LINE" | sed 's@^ - \(.*\)$@<li>\1</li>@')
+			echo "$LINE"
+		else 
+			ZOZ="y"
+			echo "<ol>"
+			LINE=$(echo "$LINE" | sed 's@^ - \(.*\)$@<li>\1</li>@')
+			echo "$LINE"
+		fi
+	elif echo "$LINE" | grep '^.[^-].*$'>/dev/null
+	then
+		if test "$ZOZ" = "y"
+		then
+	 		echo "</ol>"
+		fi
 	elif  echo "$LINE" | grep '^$'>/dev/null
        	then
 		echo "<p>"
