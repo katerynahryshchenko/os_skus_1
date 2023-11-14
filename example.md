@@ -18,5 +18,12 @@ myslí si paní Janečková, když jí to neřekne syn – Jen co je pravda, še
 mladá neumí. A tady je ta kožišina propíchnuta, zrovna uprostřed hřbetu! Lidi
 drazí, trne stará paní, kterýpak nekola toho medvěda píchal do zad? Vždyť se
 tím zkazí celá kůže! To by můj jakživ neudělal, říká si stařena roztrpčeně, ten
-se vždycky strefoval do krku – 
+se vždycky strefoval do krku –
 
+Stránka predmetu OS <https://www.math.sk/wiki/OperacneSystemy> je hento.
+Dve URL na riadku <https://www.google.com/> aj toto <https://www.stuba.sk> je URL.
+Zoznam nasleduje
+ - Zoznam
+ - nejakých
+ - vecí
+a toto je nejaký iný text.
