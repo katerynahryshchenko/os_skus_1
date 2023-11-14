@@ -27,7 +27,7 @@ do
 		echo "$LINE"
 	elif  echo "$LINE" | grep '<https://.*>'>/dev/null
        	then
-		LINE=$(echo "$LINE" | sed 's@<https://\([^<]\+\)>@<a href = "https://\1"https://>https://\1</a>@g')
+		LINE=$(echo "$LINE" | sed 's@<https://\([^<]\+\)>@<a href = "https://\1">https://\1</a>@g')
 		echo "$LINE"
 	elif echo "$LINE" | grep '^ - .*$'>/dev/null
 	then
